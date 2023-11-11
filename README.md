@@ -1,4 +1,4 @@
-# actiondetectionlab
+# ActionDetectionLab
 
 
 # Building a SOC + Honeynet in Azure (Live Traffic)
