@@ -6,7 +6,7 @@
 
 ## Introduction
 
-In this project, I architected a sophisticated honeynet within the Azure cloud ecosystem and meticulously integrated log sources from a multitude of resources into a Log Analytics workspace. This workspace serves as the foundation for Microsoft Sentinel to construct dynamic attack maps, initiate alerts, and orchestrate incident responses. Initially, I conducted a 24-hour evaluation of various security metrics in this intentionally vulnerable environment. Afterward, I implemented stringent security measures to enhance the system's defenses and performed a subsequent 24-hour assessment to gauge the effectiveness of these improvements. The comparative analysis of these metrics is presented below. The metrics  will showcase are:
+In this project, I architected a sophisticated honeynet within the Azure cloud ecosystem and integrated log sources from a multitude of resources into a Log Analytics workspace. This workspace serves as the foundation for Microsoft Sentinel to construct dynamic attack maps, initiate alerts, and orchestrate incident responses. Initially, I conducted a 24-hour evaluation of various security metrics in this intentionally vulnerable environment. Afterward, I implemented stringent security measures to enhance the system's defenses and performed a subsequent 24-hour assessment to gauge the effectiveness of these improvements. The comparative analysis of these metrics is presented below. The metrics  will showcase are:
 
 - SecurityEvent (Windows Event Logs)
 - Syslog (Linux Event Logs)
@@ -32,7 +32,7 @@ The architecture of the mini honeynet in Azure consists of the following compone
 
 For the "BEFORE" metrics, all resources were initially provisioned with unrestricted internet exposure. Specifically, the Virtual Machines were configured with Network Security Groups (NSGs) and integrated firewalls set to allow all inbound and outbound traffic, effectively leaving them without any security constraints. Moreover, every resource within the deployment had public endpoints accessible directly from the internet, with no utilization of Private Endpoints to mitigate exposure to potential threats.
 
-In the "AFTER" state, a rigorous security enhancement protocol was implemented. The Network Security Groups were meticulously hardened, blocking all traffic except that originating from a pre-authorized administrative workstation. Concurrently, all other resources were secured using a dual-layer protection strategy: their inherent firewalls were meticulously configured, and Private Endpoints were employed to obfuscate them from the public internet. This approach significantly minimized the attack surface and enhanced the overall security posture of the deployment.
+In the "AFTER" state, a rigorous security enhancement protocol was implemented. The Network Security Groups were hardened, blocking all traffic except that originating from a pre-authorized administrative workstation. Concurrently, all other resources were secured using a dual-layer protection strategy: their inherent firewalls were meticulously configured, and Private Endpoints were employed to obfuscate them from the public internet. This approach significantly minimized the attack surface and enhanced the overall security posture of the deployment.
 
 ## Attack Maps Before Hardening / Security Controls
 ![NSG Allowed Inbound Malicious Flows](https://i.imgur.com/H9A6zx8.png)<br>
