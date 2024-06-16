@@ -6,7 +6,7 @@
 
 ## Introduction
 
-In this project, I architected a sophisticated honeynet within the Azure cloud ecosystem and meticulously integrated log sources from a multitude of resources into a Log Analytics workspace. This workspace serves as the foundation for Microsoft Sentinel to construct dynamic attack maps, initiate alerts, and orchestrate incident responses. Initially, I conducted a 24-hour evaluation of various security metrics in this intentionally vulnerable environment. Afterward, I implemented stringent security measures to enhance the system's defenses and performed a subsequent 24-hour assessment to gauge the effectiveness of these improvements. The comparative analysis of these metrics is presented below. The metrics we will showcase are:
+In this project, I architected a sophisticated honeynet within the Azure cloud ecosystem and meticulously integrated log sources from a multitude of resources into a Log Analytics workspace. This workspace serves as the foundation for Microsoft Sentinel to construct dynamic attack maps, initiate alerts, and orchestrate incident responses. Initially, I conducted a 24-hour evaluation of various security metrics in this intentionally vulnerable environment. Afterward, I implemented stringent security measures to enhance the system's defenses and performed a subsequent 24-hour assessment to gauge the effectiveness of these improvements. The comparative analysis of these metrics is presented below. The metrics  will showcase are:
 
 - SecurityEvent (Windows Event Logs)
 - Syslog (Linux Event Logs)
